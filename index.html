@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Blog Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>SEO Blog Generator</h1>
+        <div class="input-section">
+            <input type="text" id="topic" placeholder="Enter your topic">
+            <button onclick="generateTitles()">Generate Titles</button>
+            <button onclick="generateKeywords()">Generate Keywords</button>
+            <button onclick="generateContent()">Generate Content</button>
+        </div>
+        <div class="results">
+            <div class="result-box" id="titles-result"></div>
+            <div class="result-box" id="keywords-result"></div>
+            <div class="result-box" id="content-result"></div>
+        </div>
+    </div>
+</body>
+</html>
