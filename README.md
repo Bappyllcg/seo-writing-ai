@@ -2,7 +2,7 @@
 
 A web-based tool for generating SEO-optimized blog content including titles, articles, and keywords.
 
-![Screenshot](screenshot.png) <!-- Consider adding a screenshot later -->
+![Screenshot](/assets/screenshot.png) <!-- Consider adding a screenshot later -->
 
 ## Features
 - AI-powered title generation
