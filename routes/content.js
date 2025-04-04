@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
       {
         contents: [{
           parts: [{
-            text: `Generate a comprehensive SEO-optimized blog post about ${topic} minimum ${wordCount} words in HTML format. Include:
+            text: `Generate a comprehensive SEO-optimized blog post about ${topic} minimum ${wordCount} words Readability score will be 8th & 9th grade, easily understood in HTML format. Include:
               Don't add any <br> tags
               Don't write any javascript code
               Don't add any CSS code
