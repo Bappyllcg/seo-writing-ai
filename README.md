@@ -7,6 +7,7 @@ A web-based tool for generating SEO-optimized blog content including titles, art
 ## Features
 - AI-powered title generation
 - Content generation with word count control (1000-3000 words)
+- Human-like content quality with natural flow
 - Keyword suggestion engine
 - Responsive design with clean UI
 
@@ -45,4 +46,4 @@ node server.js
 ## Contributing
 Contributions are welcome! Please fork the repository and create a pull request.
 ## License
-This project is licensed under the MIT License. 
+This project is licensed under the MIT License.
