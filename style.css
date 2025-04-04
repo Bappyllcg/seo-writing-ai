@@ -1,3 +1,22 @@
+span.useTitle {
+  border: 1px solid var(--accent);
+  background-color: var(--accent);
+  color: var(--accent-text);
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  line-height: normal;
+  font-size: inherit;
+  font-family: inherit;
+  margin-top: 0.5rem;
+  border-radius: var(--standard-border-radius);
+  box-shadow: none;
+  max-width: 100%;
+  margin-left: auto;
+  max-width: 110px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -21,6 +40,9 @@
     margin-bottom: 0px;
   }
 }
+.loading {
+  text-align: center;
+}
 .result-box {
   margin-top: 20px;
   background: #f8f9fa;
@@ -32,6 +54,11 @@
   & h3 {
     margin-top: 0;
     margin-bottom: 1rem;
+  }
+  & .sticky-wraper {
+    text-align: right;
+    position: sticky;
+    top: 5px;
   }
 }
 .result-box:empty {

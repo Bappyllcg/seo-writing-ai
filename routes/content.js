@@ -62,7 +62,7 @@ router.post('/', async (req, res) => {
       {
         contents: [{
           parts: [{
-            text: `Rewrite this content to enhance human-like quality while maintaining SEO optimization and HTML structure:\n\n${responseText}\n\nInstructions:\n- Use natural transitions between ideas\n- Vary sentence length and structure\n- Add conversational phrases where appropriate\n- Maintain 5th-8th grade readability\n- Preserve all HTML tags and formatting\n- Remove any robotic or repetitive patterns. and don't add any other tags like meta tags, css style, title and js script tags`
+            text: `Rewrite this content to enhance human-like quality while maintaining SEO optimization and HTML structure:\n\n${responseText}\n\nInstructions:\n- Use natural transitions between ideas\n- Vary sentence length and structure\n- Add conversational phrases where appropriate\n- Maintain 5th-8th grade readability\n- Preserve all HTML tags and formatting\n- Remove any robotic or repetitive patterns.\n- Don't add any other tags like meta tags, css style, title and js script tags and etc.\n- Also don't add any instractions and information just need inside <div class="main-inner"> cotent.`
           }]
         }]
       }
