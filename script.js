@@ -48,7 +48,7 @@ function generateContent() {
         data: JSON.stringify({ topic, wordCount }),
         success: (data) => {
             //   $('#content-result').html(`<h3>Content:</h3><div>${data.content.replace(/\n/g, '<br>')}</div>`);
-            $('#content-result').html(`<h3>Content:</h3><div>${data.content.replace('```html', '').replace('```', '')}</div>`);
+            $('#content-result').html(`<div>${data.content.replace('```html', '').replace('```', '')}</div>`);
             console.log('Generated content:', data);
         },
         error: () => {
