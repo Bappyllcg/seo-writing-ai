@@ -7,23 +7,22 @@ function generateTitles() {
         data: JSON.stringify({ topic }),
         success: (data) => {
             $('#titles-result').html(`
-        <h3>Titles:</h3>
-        <div class="title-list">
-          ${data.titles.map(t => `
-            <div class="title-item">
-              <h4>${t.title}</h4>
-              <p>${t.meta_description}</p>
-            </div>
-          `).join('')}
-        </div>
-      `);
-            //console.log('Generated titles:', data);
+                <h3>Titles:</h3>
+                <div class="title-list">
+                ${data.titles.map(t => `
+                    <details name="faq">
+                        <summary>${t.title}</summary>
+                        <p>${t.meta_description}</p>
+                    </details>
+                `).join('')}
+                </div>
+            `);
         }
     }).fail(() => alert('Error generating titles'));
 }
 
 function generateKeywords() {
-    const topic = $('#topic').val();
+    const topic = $('#keywordTitle').val();
     $.ajax({
         url: '/api/generate/keywords',
         method: 'POST',
@@ -40,7 +39,7 @@ function generateKeywords() {
 }
 
 function generateContent() {
-    const topic = $('#topic').val();
+    const topic = $('#finalTitle').val();
     const wordCount = $('#word-count').val();
     $.ajax({
         url: '/api/generate/content',
