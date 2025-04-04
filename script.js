@@ -41,11 +41,12 @@ function generateKeywords() {
 
 function generateContent() {
     const topic = $('#topic').val();
+    const wordCount = $('#word-count').val();
     $.ajax({
         url: '/api/generate/content',
         method: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify({ topic }),
+        data: JSON.stringify({ topic, wordCount }),
         success: (data) => {
             //   $('#content-result').html(`<h3>Content:</h3><div>${data.content.replace(/\n/g, '<br>')}</div>`);
             $('#content-result').html(`<h3>Content:</h3><div>${data.content.replace('```html', '').replace('```', '')}</div>`);

@@ -13,6 +13,12 @@
         <h1>SEO Blog Generator</h1>
         <div class="input-section">
             <input type="text" id="topic" placeholder="Enter your topic">
+            <select id="word-count">
+                <option value="1000">1000 Words</option>
+                <option value="1800" selected>1800 Words</option>
+                <option value="2500">2500 Words</option>
+                <option value="3000">3000 Words</option>
+            </select>
             <button onclick="generateTitles()">Generate Titles</button>
             <button onclick="generateKeywords()">Generate Keywords</button>
             <button onclick="generateContent()">Generate Content</button>

@@ -32,7 +32,7 @@ const { topic } = req.body;
     const responseText = response.data.candidates[0].content.parts[0].text;
     const titles = JSON.parse(responseText.replace(/```json|```/g, ''));
     res.json({ titles });
-    console.log('Generated titles:', titles);
+    //console.log('Generated titles:', titles);
   } catch (error) {
     console.error('Title generation error:', error);
     res.status(500).json({ 

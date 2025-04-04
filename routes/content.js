@@ -5,14 +5,14 @@ const axios = require('axios');
 
 router.post('/', async (req, res) => {
   try {
-    const { topic } = req.body;
+    const { topic, wordCount } = req.body;
     
     const response = await axios.post(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
       {
         contents: [{
           parts: [{
-            text: `Generate a comprehensive SEO-optimized blog post about ${topic} minmum 1800 words in HTML format. Include:
+            text: `Generate a comprehensive SEO-optimized blog post about ${topic} minimum ${wordCount} words in HTML format. Include:
               Don't add any <br> tags
               Don't write any javascript code
               Don't add any CSS code
@@ -21,6 +21,13 @@ router.post('/', async (req, res) => {
               Don't add any <meta> tags
               Don't add any <title> tags
               Don't add any <h1> tags
+              You can add <h2> - <h6> tags
+              You can add <p> tags
+              You can add <blockquote> tags
+              You can add <ul> tags
+              You can add <ol> tags
+              You can add <img> tags
+              You can add <table> tags
               Content should be wrapped inside:
               <div class="main-inner">
                 <h2>Heading 2</h2>
@@ -31,6 +38,10 @@ router.post('/', async (req, res) => {
                 <h3>Heading 4</h3>
                 <p>Paragraph 3</p>
                 <p>Paragraph 4</p>
+                <blockquote>Blockquote</blockquote>
+                <h3>Heading 5</h3>
+                <p>Paragraph 5</p>
+                <p>Paragraph 6</p>
                 <div class="faq-accordion" itemscope itemtype="http://schema.org/FAQPage">
                   <div class="faq-accordion-item" itemprop="mainEntity" itemscope itemtype="http://schema.org/Question">
                     <h4 class="ts-faq-item-question" itemprop="name">Question?</h4>
@@ -45,7 +56,8 @@ router.post('/', async (req, res) => {
                     </div>
                   </div>
                 </div>
-              </div>`
+              </div>
+              If possible add more than 1 paragraph in each section.`
           }]
         }]
       }
